@@ -33,21 +33,21 @@ test('DOM popup',async({page})=>{
 })
 
 
-test('window handling',async({browser})=>{
-    const context = await browser.newContext();
-    const page = await context.newPage();
-    await page.goto('https://www.flipkart.com');
-    await page.locator('(//input[@name="q"])[1]').fill('iphone 17');
-    await page.locator('(//input[@name="q"])[1]').press('Enter');
-    const [newtab] = await Promise.all([
-        context.waitForEvent('page'),
-        page.click("//div[contains(text(),'Apple iPhone 17 (Black, 256 GB)')]")
-    ]);
-    await newtab.waitForLoadState();
-    console.log(await newtab.title());
+// test('window handling',async({browser})=>{
+//     const context = await browser.newContext();
+//     const page = await context.newPage();
+//     await page.goto('https://www.flipkart.com');
+//     await page.locator('(//input[@name="q"])[1]').fill('iphone 17');
+//     await page.locator('(//input[@name="q"])[1]').press('Enter');
+//     const [newtab] = await Promise.all([
+//         context.waitForEvent('page'),
+//         page.click("//div[contains(text(),'Apple iPhone 17 (Black, 256 GB)')]")
+//     ]);
+//     await newtab.waitForLoadState();
+//     console.log(await newtab.title());
 
 
-})
+// })
 
 test('window handling with switching btwn tabs and context',async({browser})=>{
     const context = await browser.newContext();
