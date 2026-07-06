@@ -1,0 +1,1332 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: alerts.spec.js >> window handling with switching btwn tabs and context
+- Location: tests\alerts.spec.js:52:5
+
+# Error details
+
+```
+Test timeout of 30000ms exceeded.
+```
+
+# Page snapshot
+
+```yaml
+- generic [ref=e3]:
+  - generic [ref=e7]:
+    - generic [ref=e9]:
+      - link "Flipkart" [ref=e10] [cursor=pointer]:
+        - /url: /
+        - img "Flipkart" [ref=e11]
+      - link "Explore Plus" [ref=e12] [cursor=pointer]:
+        - /url: /plus
+        - text: Explore Plus
+        - img [ref=e13]
+    - generic [ref=e16]:
+      - textbox "Search for products, brands and more" [ref=e18]: iphone 17
+      - button [ref=e19] [cursor=pointer]:
+        - img [ref=e20]
+    - link "Login" [ref=e28] [cursor=pointer]:
+      - /url: /account/login?ret=/search%3Fq%3Diphone%252017%26otracker%3Dsearch%26otracker1%3Dsearch%26marketplace%3DFLIPKART%26as-show%3Don%26as%3Doff
+    - link "Become a Seller" [ref=e30] [cursor=pointer]:
+      - /url: https://seller.flipkart.com/sell-online/?utm_source=fkwebsite&utm_medium=websitedirect
+      - generic [ref=e31]: Become a Seller
+    - generic [ref=e33] [cursor=pointer]:
+      - generic [ref=e36]: More
+      - img [ref=e37]
+    - link "Cart" [ref=e42] [cursor=pointer]:
+      - /url: /viewcart?exploreMode=true&preference=FLIPKART
+      - img [ref=e43]
+      - generic [ref=e45]: Cart
+  - generic [ref=e50]:
+    - generic [ref=e51] [cursor=pointer]:
+      - text: Electronics
+      - img [ref=e52]
+    - generic [ref=e54] [cursor=pointer]:
+      - text: TVs & Appliances
+      - img [ref=e55]
+    - generic [ref=e57] [cursor=pointer]:
+      - text: Men
+      - img [ref=e58]
+    - generic [ref=e60] [cursor=pointer]:
+      - text: Women
+      - img [ref=e61]
+    - generic [ref=e63] [cursor=pointer]:
+      - text: Baby & Kids
+      - img [ref=e64]
+    - generic [ref=e66] [cursor=pointer]:
+      - text: Home & Furniture
+      - img [ref=e67]
+    - generic [ref=e69] [cursor=pointer]:
+      - text: Sports, Books & More
+      - img [ref=e70]
+    - link "Flights" [ref=e72] [cursor=pointer]:
+      - /url: /travel/flights?otracker=nmenu_Flights
+    - link "Offer Zone" [ref=e73] [cursor=pointer]:
+      - /url: /offers-list/top-deals?screen=dynamic&pk=themeViews%3DDT-OMU-A2%3ADT-OMU~widgetType%3DdealCard~contentType%3Dneo&otracker=nmenu_offer-zone
+  - generic [ref=e74]:
+    - generic [ref=e75]:
+      - generic [ref=e77]:
+        - generic [ref=e79]:
+          - generic [ref=e82]: Filters
+          - generic [ref=e84]:
+            - generic [ref=e85]: CATEGORIES
+            - generic [ref=e87]:
+              - img [ref=e89] [cursor=pointer]
+              - link "Mobiles & Accessories" [ref=e91] [cursor=pointer]:
+                - /url: /mobiles-accessories/pr?sid=tyy&q=iphone+17&otracker=categorytree
+            - generic [ref=e93]:
+              - img [ref=e95] [cursor=pointer]
+              - link "Mobiles" [ref=e97] [cursor=pointer]:
+                - /url: /mobiles/pr?sid=tyy,4io&q=iphone+17&otracker=categorytree
+          - generic [ref=e98]:
+            - generic [ref=e99] [cursor=pointer]:
+              - generic [ref=e100]: Brand
+              - img [ref=e101]
+            - generic "Apple" [ref=e105] [cursor=pointer]:
+              - generic [ref=e109]: Apple
+          - generic [ref=e111] [cursor=pointer]:
+            - generic [ref=e112]: Network Type
+            - img [ref=e113]
+          - generic [ref=e116] [cursor=pointer]:
+            - generic [ref=e117]: Internal Storage
+            - img [ref=e118]
+          - generic [ref=e120]:
+            - generic [ref=e121] [cursor=pointer]:
+              - generic [ref=e122]: Ram
+              - img [ref=e123]
+            - generic "1 GB and Below" [ref=e127] [cursor=pointer]:
+              - generic [ref=e131]: 1 GB and Below
+          - generic [ref=e132]:
+            - generic [ref=e134]: Price
+            - generic [ref=e148]:
+              - generic [ref=e149]: .
+              - generic [ref=e150]: .
+              - generic [ref=e151]: .
+              - generic [ref=e152]: .
+              - generic [ref=e153]: .
+              - generic: .
+            - generic [ref=e154]:
+              - combobox [ref=e156]:
+                - option "Min" [selected]
+                - option "₹10000"
+                - option "₹15000"
+                - option "₹20000"
+                - option "₹30000"
+              - generic [ref=e157]: to
+              - combobox [ref=e159]:
+                - option "₹10000"
+                - option "₹15000"
+                - option "₹20000"
+                - option "₹30000"
+                - option "₹30000+" [selected]
+          - generic [ref=e161] [cursor=pointer]:
+            - generic [ref=e162]: Battery Capacity
+            - img [ref=e163]
+          - generic [ref=e166] [cursor=pointer]:
+            - generic [ref=e167]: Processor Brand
+            - img [ref=e168]
+          - generic [ref=e171] [cursor=pointer]:
+            - generic [ref=e172]: Screen Size
+            - img [ref=e173]
+          - generic [ref=e176] [cursor=pointer]:
+            - generic [ref=e177]: Type
+            - img [ref=e178]
+          - generic [ref=e181] [cursor=pointer]:
+            - generic [ref=e182]: Operating System
+            - img [ref=e183]
+          - generic [ref=e185]:
+            - generic [ref=e186] [cursor=pointer]:
+              - generic [ref=e187]: Discount
+              - img [ref=e188]
+            - generic [ref=e191]:
+              - generic "50% or more" [ref=e192] [cursor=pointer]:
+                - generic [ref=e196]: 50% or more
+              - generic "40% or more" [ref=e197] [cursor=pointer]:
+                - generic [ref=e201]: 40% or more
+              - generic "30% or more" [ref=e202] [cursor=pointer]:
+                - generic [ref=e206]: 30% or more
+              - generic "20% or more" [ref=e207] [cursor=pointer]:
+                - generic [ref=e211]: 20% or more
+              - generic "10% or more" [ref=e212] [cursor=pointer]:
+                - generic [ref=e216]: 10% or more
+          - generic [ref=e218] [cursor=pointer]:
+            - generic [ref=e219]: Sim Type
+            - img [ref=e220]
+          - generic [ref=e223] [cursor=pointer]:
+            - generic [ref=e224]: Speciality
+            - img [ref=e225]
+          - generic [ref=e228] [cursor=pointer]:
+            - generic [ref=e229]: Resolution Type
+            - img [ref=e230]
+          - generic [ref=e232]:
+            - img [ref=e237] [cursor=pointer]
+            - generic [ref=e239] [cursor=pointer]: "?"
+          - generic [ref=e241] [cursor=pointer]:
+            - generic [ref=e242]: Primary Camera
+            - img [ref=e243]
+          - generic [ref=e246] [cursor=pointer]:
+            - generic [ref=e247]: Clock Speed
+            - img [ref=e248]
+          - generic [ref=e251] [cursor=pointer]:
+            - generic [ref=e252]: Customer Ratings
+            - img [ref=e253]
+          - generic [ref=e255]:
+            - generic [ref=e256] [cursor=pointer]:
+              - generic [ref=e257]: Offers
+              - img [ref=e258]
+            - generic [ref=e261]:
+              - generic "Special Price" [ref=e262] [cursor=pointer]:
+                - generic [ref=e266]: Special Price
+              - generic "Buy More, Save More" [ref=e267] [cursor=pointer]:
+                - generic [ref=e271]: Buy More, Save More
+              - generic "No Cost EMI" [ref=e272] [cursor=pointer]:
+                - generic [ref=e276]: No Cost EMI
+          - generic [ref=e278] [cursor=pointer]:
+            - generic [ref=e279]: Features
+            - img [ref=e280]
+          - generic [ref=e283] [cursor=pointer]:
+            - generic [ref=e284]: Secondary Camera
+            - img [ref=e285]
+          - generic [ref=e288] [cursor=pointer]:
+            - generic [ref=e289]: Number of Cores
+            - img [ref=e290]
+          - generic [ref=e293] [cursor=pointer]:
+            - generic [ref=e294]: Availability
+            - img [ref=e295]
+          - generic [ref=e298] [cursor=pointer]:
+            - generic [ref=e299]: GST Invoice Available
+            - img [ref=e300]
+        - link "Need help? Help me decide Buying Guide" [ref=e303] [cursor=pointer]:
+          - /url: /buying-guide/mobiles?sid=tyy,4io&otracker=bg_from_browse_lhs
+          - generic [ref=e304]: Need help?
+          - generic [ref=e305]:
+            - text: Help me decide
+            - img [ref=e306]
+          - img "Buying Guide" [ref=e308]
+      - generic [ref=e309]:
+        - generic [ref=e312]:
+          - generic [ref=e313]:
+            - generic [ref=e314]:
+              - link "Home" [ref=e315] [cursor=pointer]:
+                - /url: /
+              - img [ref=e316]
+            - generic [ref=e318]:
+              - link "Mobiles & Accessories" [ref=e319] [cursor=pointer]:
+                - /url: /mobiles-accessories/pr?sid=tyy&marketplace=FLIPKART
+              - img [ref=e320]
+            - link "Mobiles" [ref=e323] [cursor=pointer]:
+              - /url: /mobiles/pr?sid=tyy,4io&marketplace=FLIPKART
+          - generic [ref=e324]: Showing 1 – 24 of 529 results for "iphone 17"
+          - generic [ref=e325]:
+            - generic [ref=e326]: Sort By
+            - generic [ref=e327]: Relevance
+            - generic [ref=e328] [cursor=pointer]: Popularity
+            - generic [ref=e329] [cursor=pointer]: Price -- Low to High
+            - generic [ref=e330] [cursor=pointer]: Price -- High to Low
+            - generic [ref=e331] [cursor=pointer]: Newest First
+        - link "Bestseller Apple iPhone 17 (White, 256 GB) Add to Compare Apple iPhone 17 (White, 256 GB) 4.6 15,308 Ratings & 927 Reviews • 256 GB ROM • 16.0 cm (6.3 inch) Super Retina XDR Display • 48MP + 48MP | 18MP Front Camera • A19 Chip, 6 Core Processor Processor • Apple One (1) Year Limited Warranty ₹80,900 ₹82,900 2% off Only few left Upto ₹47,350 Off on Exchange" [ref=e336] [cursor=pointer]:
+          - /url: /apple-iphone-17-white-256-gb/p/itmf98e89534d806?pid=MOBHFN6YTSH3QRCZ&lid=LSTMOBHFN6YTSH3QRCZYMRV03&marketplace=FLIPKART&q=iphone+17&store=tyy%2F4io&spotlightTagId=default_BestsellerId_tyy%2F4io&srno=s_1_1&otracker=search&otracker1=search&fm=Search&iid=59c6cd50-130a-4a62-bd34-acad17326a3b.MOBHFN6YTSH3QRCZ.SEARCH&ppt=sp&ppn=sp&ssid=awm3wjsfs00000001782358333445&qH=c9eeb2d6cc488f0b&ov_redirect=true
+          - generic [ref=e337]: Bestseller
+          - generic [ref=e338]:
+            - img "Apple iPhone 17 (White, 256 GB)" [ref=e342]
+            - generic [ref=e348]: Add to Compare
+            - img [ref=e351]
+          - generic [ref=e353]:
+            - generic [ref=e354]:
+              - generic [ref=e355]: Apple iPhone 17 (White, 256 GB)
+              - generic [ref=e356]:
+                - generic [ref=e358]:
+                  - text: "4.6"
+                  - img [ref=e359]
+                - generic [ref=e361]: 15,308 Ratings & 927 Reviews
+              - list [ref=e363]:
+                - listitem [ref=e364]: • 256 GB ROM
+                - listitem [ref=e365]: • 16.0 cm (6.3 inch) Super Retina XDR Display
+                - listitem [ref=e366]: • 48MP + 48MP | 18MP Front Camera
+                - listitem [ref=e367]: • A19 Chip, 6 Core Processor Processor
+                - listitem [ref=e368]: • Apple One (1) Year Limited Warranty
+            - generic [ref=e369]:
+              - generic [ref=e371]:
+                - generic [ref=e372]: ₹80,900
+                - generic [ref=e373]: ₹82,900
+                - generic [ref=e374]: 2% off
+              - img [ref=e376]
+              - generic [ref=e379]: Only few left
+              - generic [ref=e381]:
+                - generic [ref=e382]: Upto
+                - generic [ref=e383]: ₹47,350
+                - generic [ref=e384]: Off on Exchange
+        - link "Bestseller Apple iPhone 17 (Black, 256 GB) Add to Compare Apple iPhone 17 (Black, 256 GB) 4.6 15,308 Ratings & 927 Reviews • 256 GB ROM • 16.0 cm (6.3 inch) Super Retina XDR Display • 48MP + 48MP | 18MP Front Camera • A19 Chip, 6 Core Processor Processor • Apple One (1) Year Limited Warranty ₹80,900 ₹82,900 2% off Upto ₹47,350 Off on Exchange Bank Offer" [active] [ref=e389] [cursor=pointer]:
+          - /url: /apple-iphone-17-black-256-gb/p/itm6eb39da622cdd?pid=MOBHFN6YN2HXB5HE&lid=LSTMOBHFN6YN2HXB5HER9QXGU&marketplace=FLIPKART&q=iphone+17&store=tyy%2F4io&spotlightTagId=default_BestsellerId_tyy%2F4io&srno=s_1_2&otracker=search&otracker1=search&fm=Search&iid=59c6cd50-130a-4a62-bd34-acad17326a3b.MOBHFN6YN2HXB5HE.SEARCH&ppt=sp&ppn=sp&ssid=awm3wjsfs00000001782358333445&qH=c9eeb2d6cc488f0b&ov_redirect=true
+          - generic [ref=e390]: Bestseller
+          - generic [ref=e391]:
+            - img "Apple iPhone 17 (Black, 256 GB)" [ref=e395]
+            - generic [ref=e401]: Add to Compare
+            - img [ref=e404]
+          - generic [ref=e406]:
+            - generic [ref=e407]:
+              - generic [ref=e408]: Apple iPhone 17 (Black, 256 GB)
+              - generic [ref=e409]:
+                - generic [ref=e411]:
+                  - text: "4.6"
+                  - img [ref=e412]
+                - generic [ref=e414]: 15,308 Ratings & 927 Reviews
+              - list [ref=e416]:
+                - listitem [ref=e417]: • 256 GB ROM
+                - listitem [ref=e418]: • 16.0 cm (6.3 inch) Super Retina XDR Display
+                - listitem [ref=e419]: • 48MP + 48MP | 18MP Front Camera
+                - listitem [ref=e420]: • A19 Chip, 6 Core Processor Processor
+                - listitem [ref=e421]: • Apple One (1) Year Limited Warranty
+            - generic [ref=e422]:
+              - generic [ref=e424]:
+                - generic [ref=e425]: ₹80,900
+                - generic [ref=e426]: ₹82,900
+                - generic [ref=e427]: 2% off
+              - img [ref=e429]
+              - generic [ref=e431]:
+                - generic [ref=e432]: Upto
+                - generic [ref=e433]: ₹47,350
+                - generic [ref=e434]: Off on Exchange
+              - generic [ref=e437]: Bank Offer
+        - link "Apple iPhone 17 (Lavender, 256 GB) Add to Compare Apple iPhone 17 (Lavender, 256 GB) 4.6 15,308 Ratings & 927 Reviews • 256 GB ROM • 16.0 cm (6.3 inch) Super Retina XDR Display • 48MP + 48MP | 18MP Front Camera • A19 Chip, 6 Core Processor Processor • Apple One (1) Year Limited Warranty ₹80,900 ₹82,900 2% off Only few left Upto ₹47,350 Off on Exchange" [ref=e442] [cursor=pointer]:
+          - /url: /apple-iphone-17-lavender-256-gb/p/itmf37c8dffa4165?pid=MOBHFN6YKGBPYJZD&lid=LSTMOBHFN6YKGBPYJZDEZPBYP&marketplace=FLIPKART&q=iphone+17&store=tyy%2F4io&srno=s_1_3&otracker=search&otracker1=search&fm=organic&iid=59c6cd50-130a-4a62-bd34-acad17326a3b.MOBHFN6YKGBPYJZD.SEARCH&ppt=None&ppn=None&ssid=awm3wjsfs00000001782358333445&qH=c9eeb2d6cc488f0b&ov_redirect=true
+          - generic [ref=e443]:
+            - img "Apple iPhone 17 (Lavender, 256 GB)" [ref=e447]
+            - generic [ref=e453]: Add to Compare
+            - img [ref=e456]
+          - generic [ref=e458]:
+            - generic [ref=e459]:
+              - generic [ref=e460]: Apple iPhone 17 (Lavender, 256 GB)
+              - generic [ref=e461]:
+                - generic [ref=e463]:
+                  - text: "4.6"
+                  - img [ref=e464]
+                - generic [ref=e466]: 15,308 Ratings & 927 Reviews
+              - list [ref=e468]:
+                - listitem [ref=e469]: • 256 GB ROM
+                - listitem [ref=e470]: • 16.0 cm (6.3 inch) Super Retina XDR Display
+                - listitem [ref=e471]: • 48MP + 48MP | 18MP Front Camera
+                - listitem [ref=e472]: • A19 Chip, 6 Core Processor Processor
+                - listitem [ref=e473]: • Apple One (1) Year Limited Warranty
+            - generic [ref=e474]:
+              - generic [ref=e476]:
+                - generic [ref=e477]: ₹80,900
+                - generic [ref=e478]: ₹82,900
+                - generic [ref=e479]: 2% off
+              - img [ref=e481]
+              - generic [ref=e484]: Only few left
+              - generic [ref=e486]:
+                - generic [ref=e487]: Upto
+                - generic [ref=e488]: ₹47,350
+                - generic [ref=e489]: Off on Exchange
+        - link "Apple iPhone 17 (Sage, 256 GB) Add to Compare Apple iPhone 17 (Sage, 256 GB) 4.6 15,308 Ratings & 927 Reviews • 256 GB ROM • 16.0 cm (6.3 inch) Super Retina XDR Display • 48MP + 48MP | 18MP Front Camera • A19 Chip, 6 Core Processor Processor • Apple One (1) Year Limited Warranty ₹80,900 ₹82,900 2% off Upto ₹47,350 Off on Exchange Bank Offer" [ref=e494] [cursor=pointer]:
+          - /url: /apple-iphone-17-sage-256-gb/p/itmcfa57eff7729c?pid=MOBHFN6YNAG4ZTHS&lid=LSTMOBHFN6YNAG4ZTHSWUQQUI&marketplace=FLIPKART&q=iphone+17&store=tyy%2F4io&spotlightTagId=default_FkPickId_tyy%2F4io&srno=s_1_4&otracker=search&otracker1=search&fm=organic&iid=59c6cd50-130a-4a62-bd34-acad17326a3b.MOBHFN6YNAG4ZTHS.SEARCH&ppt=None&ppn=None&ssid=awm3wjsfs00000001782358333445&qH=c9eeb2d6cc488f0b&ov_redirect=true
+          - generic [ref=e495]:
+            - img "Apple iPhone 17 (Sage, 256 GB)" [ref=e499]
+            - generic [ref=e505]: Add to Compare
+            - img [ref=e508]
+          - generic [ref=e510]:
+            - generic [ref=e511]:
+              - generic [ref=e512]: Apple iPhone 17 (Sage, 256 GB)
+              - generic [ref=e513]:
+                - generic [ref=e515]:
+                  - text: "4.6"
+                  - img [ref=e516]
+                - generic [ref=e518]: 15,308 Ratings & 927 Reviews
+              - list [ref=e520]:
+                - listitem [ref=e521]: • 256 GB ROM
+                - listitem [ref=e522]: • 16.0 cm (6.3 inch) Super Retina XDR Display
+                - listitem [ref=e523]: • 48MP + 48MP | 18MP Front Camera
+                - listitem [ref=e524]: • A19 Chip, 6 Core Processor Processor
+                - listitem [ref=e525]: • Apple One (1) Year Limited Warranty
+            - generic [ref=e526]:
+              - generic [ref=e528]:
+                - generic [ref=e529]: ₹80,900
+                - generic [ref=e530]: ₹82,900
+                - generic [ref=e531]: 2% off
+              - img [ref=e533]
+              - generic [ref=e535]:
+                - generic [ref=e536]: Upto
+                - generic [ref=e537]: ₹47,350
+                - generic [ref=e538]: Off on Exchange
+              - generic [ref=e541]: Bank Offer
+        - link "Apple iPhone 17 (Mist Blue, 256 GB) Add to Compare Apple iPhone 17 (Mist Blue, 256 GB) 4.6 15,308 Ratings & 927 Reviews • 256 GB ROM • 16.0 cm (6.3 inch) Super Retina XDR Display • 48MP + 48MP | 18MP Front Camera • A19 Chip, 6 Core Processor Processor • Apple One (1) Year Limited Warranty ₹80,900 ₹82,900 2% off Upto ₹47,350 Off on Exchange Bank Offer" [ref=e546] [cursor=pointer]:
+          - /url: /apple-iphone-17-mist-blue-256-gb/p/itm1834df7ee2812?pid=MOBHFN6YWTXZD8SG&lid=LSTMOBHFN6YWTXZD8SGROTZTS&marketplace=FLIPKART&q=iphone+17&store=tyy%2F4io&srno=s_1_5&otracker=search&otracker1=search&fm=organic&iid=59c6cd50-130a-4a62-bd34-acad17326a3b.MOBHFN6YWTXZD8SG.SEARCH&ppt=None&ppn=None&ssid=awm3wjsfs00000001782358333445&qH=c9eeb2d6cc488f0b&ov_redirect=true
+          - generic [ref=e547]:
+            - img "Apple iPhone 17 (Mist Blue, 256 GB)" [ref=e551]
+            - generic [ref=e557]: Add to Compare
+            - img [ref=e560]
+          - generic [ref=e562]:
+            - generic [ref=e563]:
+              - generic [ref=e564]: Apple iPhone 17 (Mist Blue, 256 GB)
+              - generic [ref=e565]:
+                - generic [ref=e567]:
+                  - text: "4.6"
+                  - img [ref=e568]
+                - generic [ref=e570]: 15,308 Ratings & 927 Reviews
+              - list [ref=e572]:
+                - listitem [ref=e573]: • 256 GB ROM
+                - listitem [ref=e574]: • 16.0 cm (6.3 inch) Super Retina XDR Display
+                - listitem [ref=e575]: • 48MP + 48MP | 18MP Front Camera
+                - listitem [ref=e576]: • A19 Chip, 6 Core Processor Processor
+                - listitem [ref=e577]: • Apple One (1) Year Limited Warranty
+            - generic [ref=e578]:
+              - generic [ref=e580]:
+                - generic [ref=e581]: ₹80,900
+                - generic [ref=e582]: ₹82,900
+                - generic [ref=e583]: 2% off
+              - img [ref=e585]
+              - generic [ref=e587]:
+                - generic [ref=e588]: Upto
+                - generic [ref=e589]: ₹47,350
+                - generic [ref=e590]: Off on Exchange
+              - generic [ref=e593]: Bank Offer
+        - link "Apple iPhone 17 (Sage, 512 GB) Add to Compare Apple iPhone 17 (Sage, 512 GB) 4.6 15,308 Ratings & 927 Reviews • 512 GB ROM • 16.0 cm (6.3 inch) Super Retina XDR Display • 48MP + 48MP | 18MP Front Camera • A19 Chip, 6 Core Processor Processor • Apple One (1) Year Limited Warranty ₹1,00,900 ₹1,02,900 1% off Upto ₹47,350 Off on Exchange Bank Offer" [ref=e598] [cursor=pointer]:
+          - /url: /apple-iphone-17-sage-512-gb/p/itmdfc8706d04acc?pid=MOBHFN6YH6MCJCNJ&lid=LSTMOBHFN6YH6MCJCNJLE32VL&marketplace=FLIPKART&q=iphone+17&store=tyy%2F4io&srno=s_1_6&otracker=search&otracker1=search&fm=organic&iid=59c6cd50-130a-4a62-bd34-acad17326a3b.MOBHFN6YH6MCJCNJ.SEARCH&ppt=None&ppn=None&ssid=awm3wjsfs00000001782358333445&qH=c9eeb2d6cc488f0b&ov_redirect=true
+          - generic [ref=e599]:
+            - img "Apple iPhone 17 (Sage, 512 GB)" [ref=e603]
+            - generic [ref=e609]: Add to Compare
+            - img [ref=e612]
+          - generic [ref=e614]:
+            - generic [ref=e615]:
+              - generic [ref=e616]: Apple iPhone 17 (Sage, 512 GB)
+              - generic [ref=e617]:
+                - generic [ref=e619]:
+                  - text: "4.6"
+                  - img [ref=e620]
+                - generic [ref=e622]: 15,308 Ratings & 927 Reviews
+              - list [ref=e624]:
+                - listitem [ref=e625]: • 512 GB ROM
+                - listitem [ref=e626]: • 16.0 cm (6.3 inch) Super Retina XDR Display
+                - listitem [ref=e627]: • 48MP + 48MP | 18MP Front Camera
+                - listitem [ref=e628]: • A19 Chip, 6 Core Processor Processor
+                - listitem [ref=e629]: • Apple One (1) Year Limited Warranty
+            - generic [ref=e630]:
+              - generic [ref=e632]:
+                - generic [ref=e633]: ₹1,00,900
+                - generic [ref=e634]: ₹1,02,900
+                - generic [ref=e635]: 1% off
+              - img [ref=e637]
+              - generic [ref=e639]:
+                - generic [ref=e640]: Upto
+                - generic [ref=e641]: ₹47,350
+                - generic [ref=e642]: Off on Exchange
+              - generic [ref=e645]: Bank Offer
+        - link "Apple iPhone 17 (Mist Blue, 512 GB) Add to Compare Apple iPhone 17 (Mist Blue, 512 GB) 4.6 15,308 Ratings & 927 Reviews • 512 GB ROM • 16.0 cm (6.3 inch) Super Retina XDR Display • 48MP + 48MP | 18MP Front Camera • A19 Chip, 6 Core Processor Processor • Apple One (1) Year Limited Warranty ₹1,00,900 ₹1,02,900 1% off Upto ₹47,350 Off on Exchange Bank Offer" [ref=e650] [cursor=pointer]:
+          - /url: /apple-iphone-17-mist-blue-512-gb/p/itma33252cabe24b?pid=MOBHFN6YAQGVHJQH&lid=LSTMOBHFN6YAQGVHJQHCDZLQU&marketplace=FLIPKART&q=iphone+17&store=tyy%2F4io&srno=s_1_7&otracker=search&otracker1=search&fm=organic&iid=59c6cd50-130a-4a62-bd34-acad17326a3b.MOBHFN6YAQGVHJQH.SEARCH&ppt=None&ppn=None&ssid=awm3wjsfs00000001782358333445&qH=c9eeb2d6cc488f0b&ov_redirect=true
+          - generic [ref=e651]:
+            - img "Apple iPhone 17 (Mist Blue, 512 GB)" [ref=e655]
+            - generic [ref=e661]: Add to Compare
+            - img [ref=e664]
+          - generic [ref=e666]:
+            - generic [ref=e667]:
+              - generic [ref=e668]: Apple iPhone 17 (Mist Blue, 512 GB)
+              - generic [ref=e669]:
+                - generic [ref=e671]:
+                  - text: "4.6"
+                  - img [ref=e672]
+                - generic [ref=e674]: 15,308 Ratings & 927 Reviews
+              - list [ref=e676]:
+                - listitem [ref=e677]: • 512 GB ROM
+                - listitem [ref=e678]: • 16.0 cm (6.3 inch) Super Retina XDR Display
+                - listitem [ref=e679]: • 48MP + 48MP | 18MP Front Camera
+                - listitem [ref=e680]: • A19 Chip, 6 Core Processor Processor
+                - listitem [ref=e681]: • Apple One (1) Year Limited Warranty
+            - generic [ref=e682]:
+              - generic [ref=e684]:
+                - generic [ref=e685]: ₹1,00,900
+                - generic [ref=e686]: ₹1,02,900
+                - generic [ref=e687]: 1% off
+              - img [ref=e689]
+              - generic [ref=e691]:
+                - generic [ref=e692]: Upto
+                - generic [ref=e693]: ₹47,350
+                - generic [ref=e694]: Off on Exchange
+              - generic [ref=e697]: Bank Offer
+        - link "Apple iPhone 17 (Black, 512 GB) Add to Compare Apple iPhone 17 (Black, 512 GB) 4.6 15,308 Ratings & 927 Reviews • 512 GB ROM • 16.0 cm (6.3 inch) Super Retina XDR Display • 48MP + 48MP | 18MP Front Camera • A19 Chip, 6 Core Processor Processor • Apple One (1) Year Limited Warranty ₹1,00,900 ₹1,02,900 1% off Upto ₹47,350 Off on Exchange Bank Offer" [ref=e702] [cursor=pointer]:
+          - /url: /apple-iphone-17-black-512-gb/p/itm77eb0ef05640f?pid=MOBHFN6YHHAWSDNK&lid=LSTMOBHFN6YHHAWSDNK9EMXR6&marketplace=FLIPKART&q=iphone+17&store=tyy%2F4io&srno=s_1_8&otracker=search&otracker1=search&fm=organic&iid=59c6cd50-130a-4a62-bd34-acad17326a3b.MOBHFN6YHHAWSDNK.SEARCH&ppt=None&ppn=None&ssid=awm3wjsfs00000001782358333445&qH=c9eeb2d6cc488f0b&ov_redirect=true
+          - generic [ref=e703]:
+            - img "Apple iPhone 17 (Black, 512 GB)" [ref=e707]
+            - generic [ref=e713]: Add to Compare
+            - img [ref=e716]
+          - generic [ref=e718]:
+            - generic [ref=e719]:
+              - generic [ref=e720]: Apple iPhone 17 (Black, 512 GB)
+              - generic [ref=e721]:
+                - generic [ref=e723]:
+                  - text: "4.6"
+                  - img [ref=e724]
+                - generic [ref=e726]: 15,308 Ratings & 927 Reviews
+              - list [ref=e728]:
+                - listitem [ref=e729]: • 512 GB ROM
+                - listitem [ref=e730]: • 16.0 cm (6.3 inch) Super Retina XDR Display
+                - listitem [ref=e731]: • 48MP + 48MP | 18MP Front Camera
+                - listitem [ref=e732]: • A19 Chip, 6 Core Processor Processor
+                - listitem [ref=e733]: • Apple One (1) Year Limited Warranty
+            - generic [ref=e734]:
+              - generic [ref=e736]:
+                - generic [ref=e737]: ₹1,00,900
+                - generic [ref=e738]: ₹1,02,900
+                - generic [ref=e739]: 1% off
+              - img [ref=e741]
+              - generic [ref=e743]:
+                - generic [ref=e744]: Upto
+                - generic [ref=e745]: ₹47,350
+                - generic [ref=e746]: Off on Exchange
+              - generic [ref=e749]: Bank Offer
+        - link "Apple iPhone 17 (White, 512 GB) Add to Compare Apple iPhone 17 (White, 512 GB) 4.6 15,308 Ratings & 927 Reviews • 512 GB ROM • 16.0 cm (6.3 inch) Super Retina XDR Display • 48MP + 48MP | 18MP Front Camera • A19 Chip, 6 Core Processor Processor • Apple One (1) Year Limited Warranty ₹1,00,900 ₹1,02,900 1% off Upto ₹47,350 Off on Exchange Bank Offer" [ref=e754] [cursor=pointer]:
+          - /url: /apple-iphone-17-white-512-gb/p/itm32fb82bd5790e?pid=MOBHFN6Y7UDCBEVW&lid=LSTMOBHFN6Y7UDCBEVWYFFENZ&marketplace=FLIPKART&q=iphone+17&store=tyy%2F4io&srno=s_1_9&otracker=search&otracker1=search&fm=organic&iid=59c6cd50-130a-4a62-bd34-acad17326a3b.MOBHFN6Y7UDCBEVW.SEARCH&ppt=None&ppn=None&ssid=awm3wjsfs00000001782358333445&qH=c9eeb2d6cc488f0b&ov_redirect=true
+          - generic [ref=e755]:
+            - img "Apple iPhone 17 (White, 512 GB)" [ref=e759]
+            - generic [ref=e765]: Add to Compare
+            - img [ref=e768]
+          - generic [ref=e770]:
+            - generic [ref=e771]:
+              - generic [ref=e772]: Apple iPhone 17 (White, 512 GB)
+              - generic [ref=e773]:
+                - generic [ref=e775]:
+                  - text: "4.6"
+                  - img [ref=e776]
+                - generic [ref=e778]: 15,308 Ratings & 927 Reviews
+              - list [ref=e780]:
+                - listitem [ref=e781]: • 512 GB ROM
+                - listitem [ref=e782]: • 16.0 cm (6.3 inch) Super Retina XDR Display
+                - listitem [ref=e783]: • 48MP + 48MP | 18MP Front Camera
+                - listitem [ref=e784]: • A19 Chip, 6 Core Processor Processor
+                - listitem [ref=e785]: • Apple One (1) Year Limited Warranty
+            - generic [ref=e786]:
+              - generic [ref=e788]:
+                - generic [ref=e789]: ₹1,00,900
+                - generic [ref=e790]: ₹1,02,900
+                - generic [ref=e791]: 1% off
+              - img [ref=e793]
+              - generic [ref=e795]:
+                - generic [ref=e796]: Upto
+                - generic [ref=e797]: ₹47,350
+                - generic [ref=e798]: Off on Exchange
+              - generic [ref=e801]: Bank Offer
+        - link "Apple iPhone 17 (Lavender, 512 GB) Add to Compare Apple iPhone 17 (Lavender, 512 GB) 4.6 15,308 Ratings & 927 Reviews • 512 GB ROM • 16.0 cm (6.3 inch) Super Retina XDR Display • 48MP + 48MP | 18MP Front Camera • A19 Chip, 6 Core Processor Processor • Apple One (1) Year Limited Warranty ₹1,00,900 ₹1,02,900 1% off Upto ₹47,350 Off on Exchange Bank Offer" [ref=e806] [cursor=pointer]:
+          - /url: /apple-iphone-17-lavender-512-gb/p/itm65125b175fe66?pid=MOBHFN6YHYFUEBGW&lid=LSTMOBHFN6YHYFUEBGWG1QU6P&marketplace=FLIPKART&q=iphone+17&store=tyy%2F4io&srno=s_1_10&otracker=search&otracker1=search&fm=organic&iid=59c6cd50-130a-4a62-bd34-acad17326a3b.MOBHFN6YHYFUEBGW.SEARCH&ppt=None&ppn=None&ssid=awm3wjsfs00000001782358333445&qH=c9eeb2d6cc488f0b&ov_redirect=true
+          - generic [ref=e807]:
+            - img "Apple iPhone 17 (Lavender, 512 GB)" [ref=e811]
+            - generic [ref=e817]: Add to Compare
+            - img [ref=e820]
+          - generic [ref=e822]:
+            - generic [ref=e823]:
+              - generic [ref=e824]: Apple iPhone 17 (Lavender, 512 GB)
+              - generic [ref=e825]:
+                - generic [ref=e827]:
+                  - text: "4.6"
+                  - img [ref=e828]
+                - generic [ref=e830]: 15,308 Ratings & 927 Reviews
+              - list [ref=e832]:
+                - listitem [ref=e833]: • 512 GB ROM
+                - listitem [ref=e834]: • 16.0 cm (6.3 inch) Super Retina XDR Display
+                - listitem [ref=e835]: • 48MP + 48MP | 18MP Front Camera
+                - listitem [ref=e836]: • A19 Chip, 6 Core Processor Processor
+                - listitem [ref=e837]: • Apple One (1) Year Limited Warranty
+            - generic [ref=e838]:
+              - generic [ref=e840]:
+                - generic [ref=e841]: ₹1,00,900
+                - generic [ref=e842]: ₹1,02,900
+                - generic [ref=e843]: 1% off
+              - img [ref=e845]
+              - generic [ref=e847]:
+                - generic [ref=e848]: Upto
+                - generic [ref=e849]: ₹47,350
+                - generic [ref=e850]: Off on Exchange
+              - generic [ref=e853]: Bank Offer
+        - link "Apple iPhone 17e (Black, 256 GB) Add to Compare Apple iPhone 17e (Black, 256 GB) 4.6 218 Ratings & 21 Reviews • 256 GB ROM • 15.49 cm (6.1 inch) Super Retina XDR Display • 48MP Rear Camera | A19 chip, 6 Core • 1 year warranty for phone and 1 year warranty for in Box Accessories. ₹62,900 ₹64,900 3% off Lowest price since launch Upto ₹48,650 Off on Exchange" [ref=e858] [cursor=pointer]:
+          - /url: /apple-iphone-17e-black-256-gb/p/itm52965cb6acfcd?pid=MOBHH2SH8HXZ8P5G&lid=LSTMOBHH2SH8HXZ8P5GD2XPBU&marketplace=FLIPKART&q=iphone+17&store=tyy%2F4io&srno=s_1_11&otracker=search&otracker1=search&fm=organic&iid=59c6cd50-130a-4a62-bd34-acad17326a3b.MOBHH2SH8HXZ8P5G.SEARCH&ppt=None&ppn=None&ssid=awm3wjsfs00000001782358333445&qH=c9eeb2d6cc488f0b&ov_redirect=true
+          - generic [ref=e859]:
+            - img "Apple iPhone 17e (Black, 256 GB)" [ref=e863]
+            - generic [ref=e869]: Add to Compare
+            - img [ref=e872]
+          - generic [ref=e874]:
+            - generic [ref=e875]:
+              - generic [ref=e876]: Apple iPhone 17e (Black, 256 GB)
+              - generic [ref=e877]:
+                - generic [ref=e879]:
+                  - text: "4.6"
+                  - img [ref=e880]
+                - generic [ref=e882]: 218 Ratings & 21 Reviews
+              - list [ref=e884]:
+                - listitem [ref=e885]: • 256 GB ROM
+                - listitem [ref=e886]: • 15.49 cm (6.1 inch) Super Retina XDR Display
+                - listitem [ref=e887]: • 48MP Rear Camera | A19 chip, 6 Core
+                - listitem [ref=e888]: • 1 year warranty for phone and 1 year warranty for in Box Accessories.
+            - generic [ref=e889]:
+              - generic [ref=e891]:
+                - generic [ref=e892]: ₹62,900
+                - generic [ref=e893]: ₹64,900
+                - generic [ref=e894]: 3% off
+              - img [ref=e896]
+              - generic [ref=e899]: Lowest price since launch
+              - generic [ref=e901]:
+                - generic [ref=e902]: Upto
+                - generic [ref=e903]: ₹48,650
+                - generic [ref=e904]: Off on Exchange
+        - link "Apple iPhone 17e (White, 256 GB) Add to Compare Apple iPhone 17e (White, 256 GB) 4.6 218 Ratings & 21 Reviews • 256 GB ROM • 15.49 cm (6.1 inch) Super Retina XDR Display • 48MP Rear Camera | A19 chip, 6 Core • 1 year warranty for phone and 1 year warranty for in Box Accessories. ₹62,900 ₹64,900 3% off Lowest price since launch Upto ₹48,650 Off on Exchange" [ref=e909] [cursor=pointer]:
+          - /url: /apple-iphone-17e-white-256-gb/p/itmb0086ea331d77?pid=MOBHH2SHZTCY93VF&lid=LSTMOBHH2SHZTCY93VFVMMWSH&marketplace=FLIPKART&q=iphone+17&store=tyy%2F4io&srno=s_1_12&otracker=search&otracker1=search&fm=organic&iid=59c6cd50-130a-4a62-bd34-acad17326a3b.MOBHH2SHZTCY93VF.SEARCH&ppt=None&ppn=None&ssid=awm3wjsfs00000001782358333445&qH=c9eeb2d6cc488f0b&ov_redirect=true
+          - generic [ref=e910]:
+            - img "Apple iPhone 17e (White, 256 GB)" [ref=e914]
+            - generic [ref=e920]: Add to Compare
+            - img [ref=e923]
+          - generic [ref=e925]:
+            - generic [ref=e926]:
+              - generic [ref=e927]: Apple iPhone 17e (White, 256 GB)
+              - generic [ref=e928]:
+                - generic [ref=e930]:
+                  - text: "4.6"
+                  - img [ref=e931]
+                - generic [ref=e933]: 218 Ratings & 21 Reviews
+              - list [ref=e935]:
+                - listitem [ref=e936]: • 256 GB ROM
+                - listitem [ref=e937]: • 15.49 cm (6.1 inch) Super Retina XDR Display
+                - listitem [ref=e938]: • 48MP Rear Camera | A19 chip, 6 Core
+                - listitem [ref=e939]: • 1 year warranty for phone and 1 year warranty for in Box Accessories.
+            - generic [ref=e940]:
+              - generic [ref=e942]:
+                - generic [ref=e943]: ₹62,900
+                - generic [ref=e944]: ₹64,900
+                - generic [ref=e945]: 3% off
+              - img [ref=e947]
+              - generic [ref=e950]: Lowest price since launch
+              - generic [ref=e952]:
+                - generic [ref=e953]: Upto
+                - generic [ref=e954]: ₹48,650
+                - generic [ref=e955]: Off on Exchange
+        - link "Apple iPhone 17e (Soft Pink, 256 GB) Add to Compare Apple iPhone 17e (Soft Pink, 256 GB) 4.6 218 Ratings & 21 Reviews • 256 GB ROM • 15.49 cm (6.1 inch) Super Retina XDR Display • 48MP Rear Camera | A19 chip, 6 Core • 1 year warranty for phone and 1 year warranty for in Box Accessories. ₹62,900 ₹64,900 3% off Lowest price since launch Upto ₹48,650 Off on Exchange" [ref=e960] [cursor=pointer]:
+          - /url: /apple-iphone-17e-soft-pink-256-gb/p/itm124dbc903758f?pid=MOBHH2SHDXGYG2EZ&lid=LSTMOBHH2SHDXGYG2EZS2DNWZ&marketplace=FLIPKART&q=iphone+17&store=tyy%2F4io&srno=s_1_13&otracker=search&otracker1=search&fm=organic&iid=59c6cd50-130a-4a62-bd34-acad17326a3b.MOBHH2SHDXGYG2EZ.SEARCH&ppt=None&ppn=None&ssid=awm3wjsfs00000001782358333445&qH=c9eeb2d6cc488f0b&ov_redirect=true
+          - generic [ref=e961]:
+            - img "Apple iPhone 17e (Soft Pink, 256 GB)" [ref=e965]
+            - generic [ref=e971]: Add to Compare
+            - img [ref=e974]
+          - generic [ref=e976]:
+            - generic [ref=e977]:
+              - generic [ref=e978]: Apple iPhone 17e (Soft Pink, 256 GB)
+              - generic [ref=e979]:
+                - generic [ref=e981]:
+                  - text: "4.6"
+                  - img [ref=e982]
+                - generic [ref=e984]: 218 Ratings & 21 Reviews
+              - list [ref=e986]:
+                - listitem [ref=e987]: • 256 GB ROM
+                - listitem [ref=e988]: • 15.49 cm (6.1 inch) Super Retina XDR Display
+                - listitem [ref=e989]: • 48MP Rear Camera | A19 chip, 6 Core
+                - listitem [ref=e990]: • 1 year warranty for phone and 1 year warranty for in Box Accessories.
+            - generic [ref=e991]:
+              - generic [ref=e993]:
+                - generic [ref=e994]: ₹62,900
+                - generic [ref=e995]: ₹64,900
+                - generic [ref=e996]: 3% off
+              - img [ref=e998]
+              - generic [ref=e1001]: Lowest price since launch
+              - generic [ref=e1003]:
+                - generic [ref=e1004]: Upto
+                - generic [ref=e1005]: ₹48,650
+                - generic [ref=e1006]: Off on Exchange
+        - link "Apple iPhone 17 Pro (Silver, 256 GB) Currently unavailable Add to Compare Apple iPhone 17 Pro (Silver, 256 GB) 4.7 2,522 Ratings & 166 Reviews • 256 GB ROM • 16.0 cm (6.3 inch) Super Retina XDR Display • 48MP + 48MP + 48MP | 18MP Front Camera • A19 Chip, 6 Core Processor Processor • Apple One (1) Year Limited Warranty ₹1,27,900 ₹1,34,900 5% off Upto ₹47,350 Off on Exchange Bank Offer" [ref=e1011] [cursor=pointer]:
+          - /url: /apple-iphone-17-pro-silver-256-gb/p/itm106f475c264c7?pid=MOBHFN6YPFSDYRTY&lid=LSTMOBHFN6YPFSDYRTYSCL89I&marketplace=FLIPKART&q=iphone+17&store=tyy%2F4io&srno=s_1_14&otracker=search&otracker1=search&fm=organic&iid=59c6cd50-130a-4a62-bd34-acad17326a3b.MOBHFN6YPFSDYRTY.SEARCH&ppt=None&ppn=None&ssid=awm3wjsfs00000001782358333445&qH=c9eeb2d6cc488f0b&ov_redirect=true
+          - generic [ref=e1012]:
+            - generic [ref=e1013]:
+              - img "Apple iPhone 17 Pro (Silver, 256 GB)" [ref=e1016]
+              - generic: Currently unavailable
+            - generic [ref=e1022]: Add to Compare
+            - img [ref=e1025]
+          - generic [ref=e1027]:
+            - generic [ref=e1028]:
+              - generic [ref=e1029]: Apple iPhone 17 Pro (Silver, 256 GB)
+              - generic [ref=e1030]:
+                - generic [ref=e1032]:
+                  - text: "4.7"
+                  - img [ref=e1033]
+                - generic [ref=e1035]: 2,522 Ratings & 166 Reviews
+              - list [ref=e1037]:
+                - listitem [ref=e1038]: • 256 GB ROM
+                - listitem [ref=e1039]: • 16.0 cm (6.3 inch) Super Retina XDR Display
+                - listitem [ref=e1040]: • 48MP + 48MP + 48MP | 18MP Front Camera
+                - listitem [ref=e1041]: • A19 Chip, 6 Core Processor Processor
+                - listitem [ref=e1042]: • Apple One (1) Year Limited Warranty
+            - generic [ref=e1043]:
+              - generic [ref=e1045]:
+                - generic [ref=e1046]: ₹1,27,900
+                - generic [ref=e1047]: ₹1,34,900
+                - generic [ref=e1048]: 5% off
+              - img [ref=e1050]
+              - generic [ref=e1052]:
+                - generic [ref=e1053]: Upto
+                - generic [ref=e1054]: ₹47,350
+                - generic [ref=e1055]: Off on Exchange
+              - generic [ref=e1058]: Bank Offer
+        - link "Apple iPhone 17 Pro (Deep Blue, 512 GB) Add to Compare Apple iPhone 17 Pro (Deep Blue, 512 GB) 4.7 2,522 Ratings & 166 Reviews • 512 GB ROM • 16.0 cm (6.3 inch) Super Retina XDR Display • 48MP + 48MP + 48MP | 18MP Front Camera • A19 Chip, 6 Core Processor Processor • Apple One (1) Year Limited Warranty ₹1,47,900 ₹1,54,900 4% off Upto ₹47,350 Off on Exchange Bank Offer" [ref=e1063] [cursor=pointer]:
+          - /url: /apple-iphone-17-pro-deep-blue-512-gb/p/itmce30d684c921a?pid=MOBHFN6YTHZWQX7H&lid=LSTMOBHFN6YTHZWQX7HB1XVMV&marketplace=FLIPKART&q=iphone+17&store=tyy%2F4io&srno=s_1_15&otracker=search&otracker1=search&fm=organic&iid=59c6cd50-130a-4a62-bd34-acad17326a3b.MOBHFN6YTHZWQX7H.SEARCH&ppt=None&ppn=None&ssid=awm3wjsfs00000001782358333445&qH=c9eeb2d6cc488f0b&ov_redirect=true
+          - generic [ref=e1064]:
+            - img "Apple iPhone 17 Pro (Deep Blue, 512 GB)" [ref=e1068]
+            - generic [ref=e1074]: Add to Compare
+            - img [ref=e1077]
+          - generic [ref=e1079]:
+            - generic [ref=e1080]:
+              - generic [ref=e1081]: Apple iPhone 17 Pro (Deep Blue, 512 GB)
+              - generic [ref=e1082]:
+                - generic [ref=e1084]:
+                  - text: "4.7"
+                  - img [ref=e1085]
+                - generic [ref=e1087]: 2,522 Ratings & 166 Reviews
+              - list [ref=e1089]:
+                - listitem [ref=e1090]: • 512 GB ROM
+                - listitem [ref=e1091]: • 16.0 cm (6.3 inch) Super Retina XDR Display
+                - listitem [ref=e1092]: • 48MP + 48MP + 48MP | 18MP Front Camera
+                - listitem [ref=e1093]: • A19 Chip, 6 Core Processor Processor
+                - listitem [ref=e1094]: • Apple One (1) Year Limited Warranty
+            - generic [ref=e1095]:
+              - generic [ref=e1097]:
+                - generic [ref=e1098]: ₹1,47,900
+                - generic [ref=e1099]: ₹1,54,900
+                - generic [ref=e1100]: 4% off
+              - img [ref=e1102]
+              - generic [ref=e1104]:
+                - generic [ref=e1105]: Upto
+                - generic [ref=e1106]: ₹47,350
+                - generic [ref=e1107]: Off on Exchange
+              - generic [ref=e1110]: Bank Offer
+        - link "Apple iPhone 17 Pro (Cosmic Orange, 256 GB) Add to Compare Apple iPhone 17 Pro (Cosmic Orange, 256 GB) 4.7 2,522 Ratings & 166 Reviews • 256 GB ROM • 16.0 cm (6.3 inch) Super Retina XDR Display • 48MP + 48MP + 48MP | 18MP Front Camera • A19 Chip, 6 Core Processor Processor • Apple One (1) Year Limited Warranty ₹1,27,900 ₹1,34,900 5% off Upto ₹47,350 Off on Exchange Bank Offer" [ref=e1115] [cursor=pointer]:
+          - /url: /apple-iphone-17-pro-cosmic-orange-256-gb/p/itm76fe37ca9ea8c?pid=MOBHFN6YR8HF5BQ9&lid=LSTMOBHFN6YR8HF5BQ9RBYDOE&marketplace=FLIPKART&q=iphone+17&store=tyy%2F4io&srno=s_1_16&otracker=search&otracker1=search&fm=organic&iid=59c6cd50-130a-4a62-bd34-acad17326a3b.MOBHFN6YR8HF5BQ9.SEARCH&ppt=None&ppn=None&ssid=awm3wjsfs00000001782358333445&qH=c9eeb2d6cc488f0b&ov_redirect=true
+          - generic [ref=e1116]:
+            - img "Apple iPhone 17 Pro (Cosmic Orange, 256 GB)" [ref=e1120]
+            - generic [ref=e1126]: Add to Compare
+            - img [ref=e1129]
+          - generic [ref=e1131]:
+            - generic [ref=e1132]:
+              - generic [ref=e1133]: Apple iPhone 17 Pro (Cosmic Orange, 256 GB)
+              - generic [ref=e1134]:
+                - generic [ref=e1136]:
+                  - text: "4.7"
+                  - img [ref=e1137]
+                - generic [ref=e1139]: 2,522 Ratings & 166 Reviews
+              - list [ref=e1141]:
+                - listitem [ref=e1142]: • 256 GB ROM
+                - listitem [ref=e1143]: • 16.0 cm (6.3 inch) Super Retina XDR Display
+                - listitem [ref=e1144]: • 48MP + 48MP + 48MP | 18MP Front Camera
+                - listitem [ref=e1145]: • A19 Chip, 6 Core Processor Processor
+                - listitem [ref=e1146]: • Apple One (1) Year Limited Warranty
+            - generic [ref=e1147]:
+              - generic [ref=e1149]:
+                - generic [ref=e1150]: ₹1,27,900
+                - generic [ref=e1151]: ₹1,34,900
+                - generic [ref=e1152]: 5% off
+              - img [ref=e1154]
+              - generic [ref=e1156]:
+                - generic [ref=e1157]: Upto
+                - generic [ref=e1158]: ₹47,350
+                - generic [ref=e1159]: Off on Exchange
+              - generic [ref=e1162]: Bank Offer
+        - link "Apple iPhone 17 Pro (Deep Blue, 256 GB) Add to Compare Apple iPhone 17 Pro (Deep Blue, 256 GB) 4.7 2,522 Ratings & 166 Reviews • 256 GB ROM • 16.0 cm (6.3 inch) Super Retina XDR Display • 48MP + 48MP + 48MP | 18MP Front Camera • A19 Chip, 6 Core Processor Processor • Apple One (1) Year Limited Warranty ₹1,27,900 ₹1,34,900 5% off Upto ₹47,350 Off on Exchange Bank Offer" [ref=e1167] [cursor=pointer]:
+          - /url: /apple-iphone-17-pro-deep-blue-256-gb/p/itm239d0b996d7f0?pid=MOBHFN6YV7GYZHSM&lid=LSTMOBHFN6YV7GYZHSMOB0WBP&marketplace=FLIPKART&q=iphone+17&store=tyy%2F4io&srno=s_1_17&otracker=search&otracker1=search&fm=organic&iid=59c6cd50-130a-4a62-bd34-acad17326a3b.MOBHFN6YV7GYZHSM.SEARCH&ppt=None&ppn=None&ssid=awm3wjsfs00000001782358333445&qH=c9eeb2d6cc488f0b&ov_redirect=true
+          - generic [ref=e1168]:
+            - img "Apple iPhone 17 Pro (Deep Blue, 256 GB)" [ref=e1172]
+            - generic [ref=e1178]: Add to Compare
+            - img [ref=e1181]
+          - generic [ref=e1183]:
+            - generic [ref=e1184]:
+              - generic [ref=e1185]: Apple iPhone 17 Pro (Deep Blue, 256 GB)
+              - generic [ref=e1186]:
+                - generic [ref=e1188]:
+                  - text: "4.7"
+                  - img [ref=e1189]
+                - generic [ref=e1191]: 2,522 Ratings & 166 Reviews
+              - list [ref=e1193]:
+                - listitem [ref=e1194]: • 256 GB ROM
+                - listitem [ref=e1195]: • 16.0 cm (6.3 inch) Super Retina XDR Display
+                - listitem [ref=e1196]: • 48MP + 48MP + 48MP | 18MP Front Camera
+                - listitem [ref=e1197]: • A19 Chip, 6 Core Processor Processor
+                - listitem [ref=e1198]: • Apple One (1) Year Limited Warranty
+            - generic [ref=e1199]:
+              - generic [ref=e1201]:
+                - generic [ref=e1202]: ₹1,27,900
+                - generic [ref=e1203]: ₹1,34,900
+                - generic [ref=e1204]: 5% off
+              - img [ref=e1206]
+              - generic [ref=e1208]:
+                - generic [ref=e1209]: Upto
+                - generic [ref=e1210]: ₹47,350
+                - generic [ref=e1211]: Off on Exchange
+              - generic [ref=e1214]: Bank Offer
+        - link "Apple iPhone 17 Pro Max (Silver, 256 GB) Add to Compare Apple iPhone 17 Pro Max (Silver, 256 GB) 4.8 1,348 Ratings & 108 Reviews • 256 GB ROM • 17.53 cm (6.9 inch) Super Retina XDR Display • 48MP + 48MP + 48MP | 18MP Front Camera • A19 Chip, 6 Core Processor Processor • Apple One (1) Year Limited Warranty ₹1,42,900 ₹1,49,900 4% off Upto ₹47,350 Off on Exchange Bank Offer" [ref=e1219] [cursor=pointer]:
+          - /url: /apple-iphone-17-pro-max-silver-256-gb/p/itmd38e30731883a?pid=MOBHFN6YCXHMND9W&lid=LSTMOBHFN6YCXHMND9WWWSOXI&marketplace=FLIPKART&q=iphone+17&store=tyy%2F4io&srno=s_1_18&otracker=search&otracker1=search&fm=organic&iid=59c6cd50-130a-4a62-bd34-acad17326a3b.MOBHFN6YCXHMND9W.SEARCH&ppt=None&ppn=None&ssid=awm3wjsfs00000001782358333445&qH=c9eeb2d6cc488f0b&ov_redirect=true
+          - generic [ref=e1220]:
+            - img "Apple iPhone 17 Pro Max (Silver, 256 GB)" [ref=e1224]
+            - generic [ref=e1230]: Add to Compare
+            - img [ref=e1233]
+          - generic [ref=e1235]:
+            - generic [ref=e1236]:
+              - generic [ref=e1237]: Apple iPhone 17 Pro Max (Silver, 256 GB)
+              - generic [ref=e1238]:
+                - generic [ref=e1240]:
+                  - text: "4.8"
+                  - img [ref=e1241]
+                - generic [ref=e1243]: 1,348 Ratings & 108 Reviews
+              - list [ref=e1245]:
+                - listitem [ref=e1246]: • 256 GB ROM
+                - listitem [ref=e1247]: • 17.53 cm (6.9 inch) Super Retina XDR Display
+                - listitem [ref=e1248]: • 48MP + 48MP + 48MP | 18MP Front Camera
+                - listitem [ref=e1249]: • A19 Chip, 6 Core Processor Processor
+                - listitem [ref=e1250]: • Apple One (1) Year Limited Warranty
+            - generic [ref=e1251]:
+              - generic [ref=e1253]:
+                - generic [ref=e1254]: ₹1,42,900
+                - generic [ref=e1255]: ₹1,49,900
+                - generic [ref=e1256]: 4% off
+              - img [ref=e1258]
+              - generic [ref=e1260]:
+                - generic [ref=e1261]: Upto
+                - generic [ref=e1262]: ₹47,350
+                - generic [ref=e1263]: Off on Exchange
+              - generic [ref=e1266]: Bank Offer
+        - link "Apple iPhone 17 Pro Max (Cosmic Orange, 256 GB) Add to Compare Apple iPhone 17 Pro Max (Cosmic Orange, 256 GB) 4.8 1,348 Ratings & 108 Reviews • 256 GB ROM • 17.53 cm (6.9 inch) Super Retina XDR Display • 48MP + 48MP + 48MP | 18MP Front Camera • A19 Chip, 6 Core Processor Processor • Apple One (1) Year Limited Warranty ₹1,42,900 ₹1,49,900 4% off Only 3 left Upto ₹47,350 Off on Exchange" [ref=e1271] [cursor=pointer]:
+          - /url: /apple-iphone-17-pro-max-cosmic-orange-256-gb/p/itm81f3a173391c4?pid=MOBHFN6YQKMWVPXH&lid=LSTMOBHFN6YQKMWVPXH7A8B5U&marketplace=FLIPKART&q=iphone+17&store=tyy%2F4io&srno=s_1_19&otracker=search&otracker1=search&fm=organic&iid=59c6cd50-130a-4a62-bd34-acad17326a3b.MOBHFN6YQKMWVPXH.SEARCH&ppt=None&ppn=None&ssid=awm3wjsfs00000001782358333445&qH=c9eeb2d6cc488f0b&ov_redirect=true
+          - generic [ref=e1272]:
+            - img "Apple iPhone 17 Pro Max (Cosmic Orange, 256 GB)" [ref=e1276]
+            - generic [ref=e1282]: Add to Compare
+            - img [ref=e1285]
+          - generic [ref=e1287]:
+            - generic [ref=e1288]:
+              - generic [ref=e1289]: Apple iPhone 17 Pro Max (Cosmic Orange, 256 GB)
+              - generic [ref=e1290]:
+                - generic [ref=e1292]:
+                  - text: "4.8"
+                  - img [ref=e1293]
+                - generic [ref=e1295]: 1,348 Ratings & 108 Reviews
+              - list [ref=e1297]:
+                - listitem [ref=e1298]: • 256 GB ROM
+                - listitem [ref=e1299]: • 17.53 cm (6.9 inch) Super Retina XDR Display
+                - listitem [ref=e1300]: • 48MP + 48MP + 48MP | 18MP Front Camera
+                - listitem [ref=e1301]: • A19 Chip, 6 Core Processor Processor
+                - listitem [ref=e1302]: • Apple One (1) Year Limited Warranty
+            - generic [ref=e1303]:
+              - generic [ref=e1305]:
+                - generic [ref=e1306]: ₹1,42,900
+                - generic [ref=e1307]: ₹1,49,900
+                - generic [ref=e1308]: 4% off
+              - img [ref=e1310]
+              - generic [ref=e1313]: Only 3 left
+              - generic [ref=e1315]:
+                - generic [ref=e1316]: Upto
+                - generic [ref=e1317]: ₹47,350
+                - generic [ref=e1318]: Off on Exchange
+        - link "Apple iPhone 17 Pro Max (Deep Blue, 512 GB) Add to Compare Apple iPhone 17 Pro Max (Deep Blue, 512 GB) 4.8 1,348 Ratings & 108 Reviews • 512 GB ROM • 17.53 cm (6.9 inch) Super Retina XDR Display • 48MP + 48MP + 48MP | 18MP Front Camera • A19 Chip, 6 Core Processor Processor • Apple One (1) Year Limited Warranty ₹1,62,900 ₹1,69,900 4% off Upto ₹47,350 Off on Exchange Bank Offer" [ref=e1323] [cursor=pointer]:
+          - /url: /apple-iphone-17-pro-max-deep-blue-512-gb/p/itm275e00dd11259?pid=MOBHFN6Y3HST3PZQ&lid=LSTMOBHFN6Y3HST3PZQC8XBDK&marketplace=FLIPKART&q=iphone+17&store=tyy%2F4io&srno=s_1_20&otracker=search&otracker1=search&fm=organic&iid=59c6cd50-130a-4a62-bd34-acad17326a3b.MOBHFN6Y3HST3PZQ.SEARCH&ppt=None&ppn=None&ssid=awm3wjsfs00000001782358333445&qH=c9eeb2d6cc488f0b&ov_redirect=true
+          - generic [ref=e1324]:
+            - img "Apple iPhone 17 Pro Max (Deep Blue, 512 GB)" [ref=e1328]
+            - generic [ref=e1334]: Add to Compare
+            - img [ref=e1337]
+          - generic [ref=e1339]:
+            - generic [ref=e1340]:
+              - generic [ref=e1341]: Apple iPhone 17 Pro Max (Deep Blue, 512 GB)
+              - generic [ref=e1342]:
+                - generic [ref=e1344]:
+                  - text: "4.8"
+                  - img [ref=e1345]
+                - generic [ref=e1347]: 1,348 Ratings & 108 Reviews
+              - list [ref=e1349]:
+                - listitem [ref=e1350]: • 512 GB ROM
+                - listitem [ref=e1351]: • 17.53 cm (6.9 inch) Super Retina XDR Display
+                - listitem [ref=e1352]: • 48MP + 48MP + 48MP | 18MP Front Camera
+                - listitem [ref=e1353]: • A19 Chip, 6 Core Processor Processor
+                - listitem [ref=e1354]: • Apple One (1) Year Limited Warranty
+            - generic [ref=e1355]:
+              - generic [ref=e1357]:
+                - generic [ref=e1358]: ₹1,62,900
+                - generic [ref=e1359]: ₹1,69,900
+                - generic [ref=e1360]: 4% off
+              - img [ref=e1362]
+              - generic [ref=e1364]:
+                - generic [ref=e1365]: Upto
+                - generic [ref=e1366]: ₹47,350
+                - generic [ref=e1367]: Off on Exchange
+              - generic [ref=e1370]: Bank Offer
+        - link "Apple iPhone 17 Pro Max (Cosmic Orange, 512 GB) Add to Compare Apple iPhone 17 Pro Max (Cosmic Orange, 512 GB) 4.8 1,348 Ratings & 108 Reviews • 512 GB ROM • 17.53 cm (6.9 inch) Super Retina XDR Display • 48MP + 48MP + 48MP | 18MP Front Camera • A19 Chip, 6 Core Processor Processor • Apple One (1) Year Limited Warranty ₹1,62,900 ₹1,69,900 4% off Upto ₹47,350 Off on Exchange Bank Offer" [ref=e1375] [cursor=pointer]:
+          - /url: /apple-iphone-17-pro-max-cosmic-orange-512-gb/p/itm9610ba7d9c887?pid=MOBHFN6YGCTS2WGA&lid=LSTMOBHFN6YGCTS2WGAMEXV4L&marketplace=FLIPKART&q=iphone+17&store=tyy%2F4io&srno=s_1_21&otracker=search&otracker1=search&fm=organic&iid=59c6cd50-130a-4a62-bd34-acad17326a3b.MOBHFN6YGCTS2WGA.SEARCH&ppt=None&ppn=None&ssid=awm3wjsfs00000001782358333445&qH=c9eeb2d6cc488f0b&ov_redirect=true
+          - generic [ref=e1376]:
+            - img "Apple iPhone 17 Pro Max (Cosmic Orange, 512 GB)" [ref=e1380]
+            - generic [ref=e1386]: Add to Compare
+            - img [ref=e1389]
+          - generic [ref=e1391]:
+            - generic [ref=e1392]:
+              - generic [ref=e1393]: Apple iPhone 17 Pro Max (Cosmic Orange, 512 GB)
+              - generic [ref=e1394]:
+                - generic [ref=e1396]:
+                  - text: "4.8"
+                  - img [ref=e1397]
+                - generic [ref=e1399]: 1,348 Ratings & 108 Reviews
+              - list [ref=e1401]:
+                - listitem [ref=e1402]: • 512 GB ROM
+                - listitem [ref=e1403]: • 17.53 cm (6.9 inch) Super Retina XDR Display
+                - listitem [ref=e1404]: • 48MP + 48MP + 48MP | 18MP Front Camera
+                - listitem [ref=e1405]: • A19 Chip, 6 Core Processor Processor
+                - listitem [ref=e1406]: • Apple One (1) Year Limited Warranty
+            - generic [ref=e1407]:
+              - generic [ref=e1409]:
+                - generic [ref=e1410]: ₹1,62,900
+                - generic [ref=e1411]: ₹1,69,900
+                - generic [ref=e1412]: 4% off
+              - img [ref=e1414]
+              - generic [ref=e1416]:
+                - generic [ref=e1417]: Upto
+                - generic [ref=e1418]: ₹47,350
+                - generic [ref=e1419]: Off on Exchange
+              - generic [ref=e1422]: Bank Offer
+        - link "Apple iPhone 17 Pro Max (Silver, 512 GB) Add to Compare Apple iPhone 17 Pro Max (Silver, 512 GB) 4.8 1,348 Ratings & 108 Reviews • 512 GB ROM • 17.53 cm (6.9 inch) Super Retina XDR Display • 48MP + 48MP + 48MP | 18MP Front Camera • A19 Chip, 6 Core Processor Processor • Apple One (1) Year Limited Warranty ₹1,62,900 ₹1,69,900 4% off Only few left Upto ₹47,350 Off on Exchange" [ref=e1427] [cursor=pointer]:
+          - /url: /apple-iphone-17-pro-max-silver-512-gb/p/itma57b8663dea65?pid=MOBHFN6YKEJCARGW&lid=LSTMOBHFN6YKEJCARGWMENWRU&marketplace=FLIPKART&q=iphone+17&store=tyy%2F4io&srno=s_1_22&otracker=search&otracker1=search&fm=organic&iid=59c6cd50-130a-4a62-bd34-acad17326a3b.MOBHFN6YKEJCARGW.SEARCH&ppt=None&ppn=None&ssid=awm3wjsfs00000001782358333445&qH=c9eeb2d6cc488f0b&ov_redirect=true
+          - generic [ref=e1428]:
+            - img "Apple iPhone 17 Pro Max (Silver, 512 GB)" [ref=e1432]
+            - generic [ref=e1438]: Add to Compare
+            - img [ref=e1441]
+          - generic [ref=e1443]:
+            - generic [ref=e1444]:
+              - generic [ref=e1445]: Apple iPhone 17 Pro Max (Silver, 512 GB)
+              - generic [ref=e1446]:
+                - generic [ref=e1448]:
+                  - text: "4.8"
+                  - img [ref=e1449]
+                - generic [ref=e1451]: 1,348 Ratings & 108 Reviews
+              - list [ref=e1453]:
+                - listitem [ref=e1454]: • 512 GB ROM
+                - listitem [ref=e1455]: • 17.53 cm (6.9 inch) Super Retina XDR Display
+                - listitem [ref=e1456]: • 48MP + 48MP + 48MP | 18MP Front Camera
+                - listitem [ref=e1457]: • A19 Chip, 6 Core Processor Processor
+                - listitem [ref=e1458]: • Apple One (1) Year Limited Warranty
+            - generic [ref=e1459]:
+              - generic [ref=e1461]:
+                - generic [ref=e1462]: ₹1,62,900
+                - generic [ref=e1463]: ₹1,69,900
+                - generic [ref=e1464]: 4% off
+              - img [ref=e1466]
+              - generic [ref=e1469]: Only few left
+              - generic [ref=e1471]:
+                - generic [ref=e1472]: Upto
+                - generic [ref=e1473]: ₹47,350
+                - generic [ref=e1474]: Off on Exchange
+        - link "Apple iPhone 17 Pro (Silver, 512 GB) Add to Compare Apple iPhone 17 Pro (Silver, 512 GB) 4.7 2,522 Ratings & 166 Reviews • 512 GB ROM • 16.0 cm (6.3 inch) Super Retina XDR Display • 48MP + 48MP + 48MP | 18MP Front Camera • A19 Chip, 6 Core Processor Processor • Apple One (1) Year Limited Warranty ₹1,47,900 ₹1,54,900 4% off Upto ₹47,350 Off on Exchange Bank Offer" [ref=e1479] [cursor=pointer]:
+          - /url: /apple-iphone-17-pro-silver-512-gb/p/itmfe915ac778113?pid=MOBHFN6YWF7QVBBG&lid=LSTMOBHFN6YWF7QVBBGGHBLI1&marketplace=FLIPKART&q=iphone+17&store=tyy%2F4io&srno=s_1_23&otracker=search&otracker1=search&fm=organic&iid=59c6cd50-130a-4a62-bd34-acad17326a3b.MOBHFN6YWF7QVBBG.SEARCH&ppt=None&ppn=None&ssid=awm3wjsfs00000001782358333445&qH=c9eeb2d6cc488f0b&ov_redirect=true
+          - generic [ref=e1480]:
+            - img "Apple iPhone 17 Pro (Silver, 512 GB)" [ref=e1484]
+            - generic [ref=e1490]: Add to Compare
+            - img [ref=e1493]
+          - generic [ref=e1495]:
+            - generic [ref=e1496]:
+              - generic [ref=e1497]: Apple iPhone 17 Pro (Silver, 512 GB)
+              - generic [ref=e1498]:
+                - generic [ref=e1500]:
+                  - text: "4.7"
+                  - img [ref=e1501]
+                - generic [ref=e1503]: 2,522 Ratings & 166 Reviews
+              - list [ref=e1505]:
+                - listitem [ref=e1506]: • 512 GB ROM
+                - listitem [ref=e1507]: • 16.0 cm (6.3 inch) Super Retina XDR Display
+                - listitem [ref=e1508]: • 48MP + 48MP + 48MP | 18MP Front Camera
+                - listitem [ref=e1509]: • A19 Chip, 6 Core Processor Processor
+                - listitem [ref=e1510]: • Apple One (1) Year Limited Warranty
+            - generic [ref=e1511]:
+              - generic [ref=e1513]:
+                - generic [ref=e1514]: ₹1,47,900
+                - generic [ref=e1515]: ₹1,54,900
+                - generic [ref=e1516]: 4% off
+              - img [ref=e1518]
+              - generic [ref=e1520]:
+                - generic [ref=e1521]: Upto
+                - generic [ref=e1522]: ₹47,350
+                - generic [ref=e1523]: Off on Exchange
+              - generic [ref=e1526]: Bank Offer
+        - link "Apple iPhone 17 Pro (Cosmic Orange, 512 GB) Add to Compare Apple iPhone 17 Pro (Cosmic Orange, 512 GB) 4.7 2,522 Ratings & 166 Reviews • 512 GB ROM • 16.0 cm (6.3 inch) Super Retina XDR Display • 48MP + 48MP + 48MP | 18MP Front Camera • A19 Chip, 6 Core Processor Processor • Apple One (1) Year Limited Warranty ₹1,47,900 ₹1,54,900 4% off Upto ₹47,350 Off on Exchange Bank Offer" [ref=e1531] [cursor=pointer]:
+          - /url: /apple-iphone-17-pro-cosmic-orange-512-gb/p/itm999d978f08430?pid=MOBHFN6YUW9A93DC&lid=LSTMOBHFN6YUW9A93DCUFF5GV&marketplace=FLIPKART&q=iphone+17&store=tyy%2F4io&srno=s_1_24&otracker=search&otracker1=search&fm=organic&iid=59c6cd50-130a-4a62-bd34-acad17326a3b.MOBHFN6YUW9A93DC.SEARCH&ppt=None&ppn=None&ssid=awm3wjsfs00000001782358333445&qH=c9eeb2d6cc488f0b&ov_redirect=true
+          - generic [ref=e1532]:
+            - img "Apple iPhone 17 Pro (Cosmic Orange, 512 GB)" [ref=e1536]
+            - generic [ref=e1542]: Add to Compare
+            - img [ref=e1545]
+          - generic [ref=e1547]:
+            - generic [ref=e1548]:
+              - generic [ref=e1549]: Apple iPhone 17 Pro (Cosmic Orange, 512 GB)
+              - generic [ref=e1550]:
+                - generic [ref=e1552]:
+                  - text: "4.7"
+                  - img [ref=e1553]
+                - generic [ref=e1555]: 2,522 Ratings & 166 Reviews
+              - list [ref=e1557]:
+                - listitem [ref=e1558]: • 512 GB ROM
+                - listitem [ref=e1559]: • 16.0 cm (6.3 inch) Super Retina XDR Display
+                - listitem [ref=e1560]: • 48MP + 48MP + 48MP | 18MP Front Camera
+                - listitem [ref=e1561]: • A19 Chip, 6 Core Processor Processor
+                - listitem [ref=e1562]: • Apple One (1) Year Limited Warranty
+            - generic [ref=e1563]:
+              - generic [ref=e1565]:
+                - generic [ref=e1566]: ₹1,47,900
+                - generic [ref=e1567]: ₹1,54,900
+                - generic [ref=e1568]: 4% off
+              - img [ref=e1570]
+              - generic [ref=e1572]:
+                - generic [ref=e1573]: Upto
+                - generic [ref=e1574]: ₹47,350
+                - generic [ref=e1575]: Off on Exchange
+              - generic [ref=e1578]: Bank Offer
+        - generic [ref=e1581]:
+          - generic [ref=e1582]: Page 1 of 23
+          - navigation [ref=e1583]:
+            - link "1" [ref=e1584] [cursor=pointer]:
+              - /url: /search?q=iphone+17&otracker=search&otracker1=search&marketplace=FLIPKART&as-show=on&as=off&page=1
+            - link "2" [ref=e1585] [cursor=pointer]:
+              - /url: /search?q=iphone+17&otracker=search&otracker1=search&marketplace=FLIPKART&as-show=on&as=off&page=2
+            - link "3" [ref=e1586] [cursor=pointer]:
+              - /url: /search?q=iphone+17&otracker=search&otracker1=search&marketplace=FLIPKART&as-show=on&as=off&page=3
+            - link "4" [ref=e1587] [cursor=pointer]:
+              - /url: /search?q=iphone+17&otracker=search&otracker1=search&marketplace=FLIPKART&as-show=on&as=off&page=4
+            - link "5" [ref=e1588] [cursor=pointer]:
+              - /url: /search?q=iphone+17&otracker=search&otracker1=search&marketplace=FLIPKART&as-show=on&as=off&page=5
+            - link "6" [ref=e1589] [cursor=pointer]:
+              - /url: /search?q=iphone+17&otracker=search&otracker1=search&marketplace=FLIPKART&as-show=on&as=off&page=6
+            - link "7" [ref=e1590] [cursor=pointer]:
+              - /url: /search?q=iphone+17&otracker=search&otracker1=search&marketplace=FLIPKART&as-show=on&as=off&page=7
+            - link "8" [ref=e1591] [cursor=pointer]:
+              - /url: /search?q=iphone+17&otracker=search&otracker1=search&marketplace=FLIPKART&as-show=on&as=off&page=8
+            - link "9" [ref=e1592] [cursor=pointer]:
+              - /url: /search?q=iphone+17&otracker=search&otracker1=search&marketplace=FLIPKART&as-show=on&as=off&page=9
+            - link "10" [ref=e1593] [cursor=pointer]:
+              - /url: /search?q=iphone+17&otracker=search&otracker1=search&marketplace=FLIPKART&as-show=on&as=off&page=10
+            - link "Next" [ref=e1594] [cursor=pointer]:
+              - /url: /search?q=iphone+17&otracker=search&otracker1=search&marketplace=FLIPKART&as-show=on&as=off&page=2
+        - generic [ref=e1596]:
+          - text: Did you find what you were looking for?
+          - generic [ref=e1597]:
+            - generic [ref=e1598] [cursor=pointer]: "Yes"
+            - generic [ref=e1599] [cursor=pointer]: "No"
+    - generic [ref=e1601]:
+      - generic [ref=e1602]: Reviews for Popular Mobiles
+      - generic [ref=e1603]:
+        - generic [ref=e1604]:
+          - generic [ref=e1606]:
+            - img "Apple iPhone 17e (Soft Pink, 256 GB)"
+          - generic [ref=e1607]:
+            - link "1. Apple iPhone 17e (Soft Pink... 4.6 218 Ratings&21 Reviews ₹62,900 3% off" [ref=e1608] [cursor=pointer]:
+              - /url: /apple-iphone-17e-soft-pink-256-gb/p/itm124dbc903758f?pid=MOBHH2SHDXGYG2EZ&marketplace=FLIPKART&ov_redirect=true
+              - generic [ref=e1610]: 1. Apple iPhone 17e (Soft Pink...
+              - generic [ref=e1611]:
+                - generic [ref=e1612]:
+                  - text: "4.6"
+                  - img [ref=e1613]
+                - generic [ref=e1614]:
+                  - text: 218 Ratings
+                  - generic [ref=e1615]: "&21 Reviews"
+              - generic [ref=e1617]:
+                - generic [ref=e1618]: ₹62,900
+                - generic [ref=e1619]: 3% off
+            - list [ref=e1620]:
+              - listitem [ref=e1621]: 256 GB ROM
+              - listitem [ref=e1622]: 15.49 cm (6.1 inch) Super Retina XDR Display
+              - listitem [ref=e1623]: 48MP Rear Camera | A19 chip, 6 Core
+        - generic [ref=e1624]:
+          - generic [ref=e1625]: Most Helpful Review
+          - generic [ref=e1627]:
+            - generic [ref=e1628]:
+              - generic [ref=e1629]:
+                - text: "5"
+                - img [ref=e1630]
+              - paragraph [ref=e1631]: Terrific purchase
+            - generic [ref=e1635]:
+              - text: My first ever iPhone.
+              - text: Compact, minimal, and surprisingly great battery life.
+            - generic [ref=e1637]:
+              - paragraph [ref=e1638]: Sachin Jadhav
+              - img [ref=e1639]
+              - paragraph [ref=e1643]: Certified Buyer
+              - paragraph [ref=e1644]: 2 months ago
+        - generic [ref=e1645]:
+          - generic [ref=e1646]: Recent Review
+          - generic [ref=e1648]:
+            - generic [ref=e1649]:
+              - generic [ref=e1650]:
+                - text: "5"
+                - img [ref=e1651]
+              - paragraph [ref=e1652]: Terrific purchase
+            - generic [ref=e1656]: Nice phone and efficient services from Flipkart
+            - generic [ref=e1658]:
+              - paragraph [ref=e1659]: Flipkart Customer
+              - img [ref=e1660]
+              - paragraph [ref=e1664]: Certified Buyer
+              - paragraph [ref=e1665]: 1 day ago
+      - generic [ref=e1666]:
+        - generic [ref=e1667]:
+          - generic [ref=e1669]:
+            - img "Apple iPhone 17 Pro Max (Silver, 256 GB)"
+          - generic [ref=e1670]:
+            - link "2. Apple iPhone 17 Pro Max (Si... 4.8 1,348 Ratings&108 Reviews ₹1,42,900 4% off" [ref=e1671] [cursor=pointer]:
+              - /url: /apple-iphone-17-pro-max-silver-256-gb/p/itmd38e30731883a?pid=MOBHFN6YCXHMND9W&marketplace=FLIPKART&ov_redirect=true
+              - generic [ref=e1673]: 2. Apple iPhone 17 Pro Max (Si...
+              - generic [ref=e1674]:
+                - generic [ref=e1675]:
+                  - text: "4.8"
+                  - img [ref=e1676]
+                - generic [ref=e1677]:
+                  - text: 1,348 Ratings
+                  - generic [ref=e1678]: "&108 Reviews"
+              - generic [ref=e1680]:
+                - generic [ref=e1681]: ₹1,42,900
+                - generic [ref=e1682]: 4% off
+            - list [ref=e1683]:
+              - listitem [ref=e1684]: 256 GB ROM
+              - listitem [ref=e1685]: 17.53 cm (6.9 inch) Super Retina XDR Display
+              - listitem [ref=e1686]: 48MP + 48MP + 48MP | 18MP Front Camera
+        - generic [ref=e1687]:
+          - generic [ref=e1688]: Most Helpful Review
+          - generic [ref=e1690]:
+            - generic [ref=e1691]:
+              - generic [ref=e1692]:
+                - text: "5"
+                - img [ref=e1693]
+              - paragraph [ref=e1694]: Fabulous!
+            - generic [ref=e1698]:
+              - text: It was amazing phone😍 and the camera was fantastic.
+              - text: And this colour looks like wow🫶
+            - generic [ref=e1700]:
+              - paragraph [ref=e1701]: Padmalav Upadhyaya
+              - img [ref=e1702]
+              - paragraph [ref=e1706]: Certified Buyer
+              - paragraph [ref=e1707]: 8 months ago
+        - generic [ref=e1708]:
+          - generic [ref=e1709]: Recent Review
+          - generic [ref=e1711]:
+            - generic [ref=e1712]:
+              - generic [ref=e1713]:
+                - text: "5"
+                - img [ref=e1714]
+              - paragraph [ref=e1715]: Wonderful
+            - generic [ref=e1719]: Amazing phone worth every penny
+            - generic [ref=e1721]:
+              - paragraph [ref=e1722]: Flipkart Customer
+              - img [ref=e1723]
+              - paragraph [ref=e1727]: Certified Buyer
+              - paragraph [ref=e1728]: Today
+      - generic [ref=e1729]:
+        - generic [ref=e1730]:
+          - generic [ref=e1732]:
+            - img "Apple iPhone 17 Pro (Silver, 256 GB)"
+          - generic [ref=e1733]:
+            - link "3. Apple iPhone 17 Pro (Silver... 4.7 2,522 Ratings&166 Reviews ₹1,27,900 5% off" [ref=e1734] [cursor=pointer]:
+              - /url: /apple-iphone-17-pro-silver-256-gb/p/itm106f475c264c7?pid=MOBHFN6YPFSDYRTY&marketplace=FLIPKART&ov_redirect=true
+              - generic [ref=e1736]: 3. Apple iPhone 17 Pro (Silver...
+              - generic [ref=e1737]:
+                - generic [ref=e1738]:
+                  - text: "4.7"
+                  - img [ref=e1739]
+                - generic [ref=e1740]:
+                  - text: 2,522 Ratings
+                  - generic [ref=e1741]: "&166 Reviews"
+              - generic [ref=e1743]:
+                - generic [ref=e1744]: ₹1,27,900
+                - generic [ref=e1745]: 5% off
+            - list [ref=e1746]:
+              - listitem [ref=e1747]: 256 GB ROM
+              - listitem [ref=e1748]: 16.0 cm (6.3 inch) Super Retina XDR Display
+              - listitem [ref=e1749]: 48MP + 48MP + 48MP | 18MP Front Camera
+        - generic [ref=e1750]:
+          - generic [ref=e1751]: Most Helpful Review
+          - generic [ref=e1753]:
+            - generic [ref=e1754]:
+              - generic [ref=e1755]:
+                - text: "5"
+                - img [ref=e1756]
+              - paragraph [ref=e1757]: Classy product
+            - generic [ref=e1761]:
+              - text: Battery is long lasting and 8x Zoom is very awesome loved this feature.
+              - text: Camera quality sound quality is very nice
+            - generic [ref=e1763]:
+              - paragraph [ref=e1764]: Akash Lahariya
+              - img [ref=e1765]
+              - paragraph [ref=e1769]: Certified Buyer
+              - paragraph [ref=e1770]: 3 months ago
+        - generic [ref=e1771]:
+          - generic [ref=e1772]: Recent Review
+          - generic [ref=e1774]:
+            - generic [ref=e1775]:
+              - generic [ref=e1776]:
+                - text: "1"
+                - img [ref=e1777]
+              - paragraph [ref=e1778]: Not recommended at all
+            - generic [ref=e1782]: Very bad experience with this
+            - generic [ref=e1784]:
+              - paragraph [ref=e1785]: Upadhyay Krishna Bihari
+              - img [ref=e1786]
+              - paragraph [ref=e1790]: Certified Buyer
+              - paragraph [ref=e1791]: 7 days ago
+      - generic [ref=e1792]:
+        - generic [ref=e1793]:
+          - generic [ref=e1795]:
+            - img "Apple iPhone 17 (Sage, 256 GB)"
+          - generic [ref=e1796]:
+            - link "4. Apple iPhone 17 (Sage, 256 ... 4.6 15,308 Ratings&927 Reviews ₹80,900 2% off" [ref=e1797] [cursor=pointer]:
+              - /url: /apple-iphone-17-sage-256-gb/p/itmcfa57eff7729c?pid=MOBHFN6YNAG4ZTHS&marketplace=FLIPKART&ov_redirect=true
+              - generic [ref=e1799]: 4. Apple iPhone 17 (Sage, 256 ...
+              - generic [ref=e1800]:
+                - generic [ref=e1801]:
+                  - text: "4.6"
+                  - img [ref=e1802]
+                - generic [ref=e1803]:
+                  - text: 15,308 Ratings
+                  - generic [ref=e1804]: "&927 Reviews"
+              - generic [ref=e1806]:
+                - generic [ref=e1807]: ₹80,900
+                - generic [ref=e1808]: 2% off
+            - list [ref=e1809]:
+              - listitem [ref=e1810]: 256 GB ROM
+              - listitem [ref=e1811]: 16.0 cm (6.3 inch) Super Retina XDR Display
+              - listitem [ref=e1812]: 48MP + 48MP | 18MP Front Camera
+        - generic [ref=e1813]:
+          - generic [ref=e1814]: Most Helpful Review
+          - generic [ref=e1816]:
+            - generic [ref=e1817]:
+              - generic [ref=e1818]:
+                - text: "5"
+                - img [ref=e1819]
+              - paragraph [ref=e1820]: Highly recommended
+            - generic [ref=e1823]:
+              - generic [ref=e1824]: I Purchased an Iphone 17 My Dream But After I purchased it I Lost My Iphone 17 just 2 days In Buss Stand, But I am Paying EMI On Flipkart I am Very Disappoin...
+              - generic [ref=e1825] [cursor=pointer]: Read full review
+            - generic [ref=e1827]:
+              - paragraph [ref=e1828]: Yoga Narasimha
+              - img [ref=e1829]
+              - paragraph [ref=e1833]: Certified Buyer
+              - paragraph [ref=e1834]: 15 days ago
+        - generic [ref=e1835]:
+          - generic [ref=e1836]: Recent Review
+          - generic [ref=e1838]:
+            - generic [ref=e1839]:
+              - generic [ref=e1840]:
+                - text: "5"
+                - img [ref=e1841]
+              - paragraph [ref=e1842]: Excellent
+            - generic [ref=e1845]:
+              - generic [ref=e1846]: Before this one I was using iPhone 12. 17 display size, camera, video quality, performance is obviously better than 12. It looks very sleek (mist blue color ...
+              - generic [ref=e1847] [cursor=pointer]: Read full review
+            - generic [ref=e1849]:
+              - paragraph [ref=e1850]: sanmitra samanta
+              - img [ref=e1851]
+              - paragraph [ref=e1855]: Certified Buyer
+              - paragraph [ref=e1856]: Today
+  - contentinfo [ref=e1857]:
+    - generic [ref=e1859]:
+      - generic [ref=e1860]:
+        - generic [ref=e1861]:
+          - generic [ref=e1862]: ABOUT
+          - link "Contact Us" [ref=e1863] [cursor=pointer]:
+            - /url: /helpcentre?otracker=footer_navlinks
+          - link "About Us" [ref=e1864] [cursor=pointer]:
+            - /url: https://corporate.flipkart.net/corporate-home
+          - link "Careers" [ref=e1865] [cursor=pointer]:
+            - /url: https://www.flipkartcareers.com/?otracker=footer_navlinks
+          - link "Flipkart Stories" [ref=e1866] [cursor=pointer]:
+            - /url: http://stories.flipkart.com/?otracker=footer_navlinks
+          - link "Press" [ref=e1867] [cursor=pointer]:
+            - /url: http://stories.flipkart.com/category/top-stories/news/
+          - link "Corporate Information" [ref=e1868] [cursor=pointer]:
+            - /url: /corporate-information
+        - generic [ref=e1869]:
+          - generic [ref=e1870]: GROUP COMPANIES
+          - link "Myntra" [ref=e1871] [cursor=pointer]:
+            - /url: https://www.myntra.com/
+          - link "Cleartrip" [ref=e1872] [cursor=pointer]:
+            - /url: https://www.cleartrip.com/
+          - link "Shopsy" [ref=e1873] [cursor=pointer]:
+            - /url: https://www.shopsy.in/
+        - generic [ref=e1874]:
+          - generic [ref=e1875]: HELP
+          - link "Payments" [ref=e1876] [cursor=pointer]:
+            - /url: /pages/payments
+          - link "Shipping" [ref=e1877] [cursor=pointer]:
+            - /url: /pages/shipping
+          - link "Cancellation & Returns" [ref=e1878] [cursor=pointer]:
+            - /url: /helpcentre?catalog=55c9c6edb000002e002c1701&view=CATALOG
+          - link "FAQ" [ref=e1879] [cursor=pointer]:
+            - /url: /helpcentre?catalog=55c9c8e2b0000023002c1702&view=CATALOG
+        - generic [ref=e1880]:
+          - generic [ref=e1881]: CONSUMER POLICY
+          - link "Cancellation & Returns" [ref=e1882] [cursor=pointer]:
+            - /url: /pages/returnpolicy?otracker=footer_navlinks
+          - link "Terms Of Use" [ref=e1883] [cursor=pointer]:
+            - /url: /pages/terms?otracker=footer_navlinks
+          - link "Security" [ref=e1884] [cursor=pointer]:
+            - /url: /pages/paymentsecurity?otracker=footer_navlinks
+          - link "Privacy" [ref=e1885] [cursor=pointer]:
+            - /url: /pages/privacypolicy?otracker=footer_navlinks
+          - link "Sitemap" [ref=e1886] [cursor=pointer]:
+            - /url: /sitemap?otracker=footer_navlinks
+          - link "Grievance Redressal" [ref=e1887] [cursor=pointer]:
+            - /url: /pages/grievance-redressal-mechanism?otracker=footer_navlinks
+          - link "EPR Compliance" [ref=e1888] [cursor=pointer]:
+            - /url: /pages/ewaste-compliance-tnc?otracker=footer_navlinks
+          - link "FSSAI Food Safety Connect App" [ref=e1889] [cursor=pointer]:
+            - /url: https://fssai.gov.in/cms/food-safety-connect.php
+        - generic [ref=e1891]:
+          - generic [ref=e1892]: "Mail Us:"
+          - generic [ref=e1895]:
+            - paragraph [ref=e1896]: Flipkart Internet Private Limited,
+            - paragraph [ref=e1897]: Buildings Alyssa, Begonia &
+            - paragraph [ref=e1898]: Clove Embassy Tech Village,
+            - paragraph [ref=e1899]: Outer Ring Road, Devarabeesanahalli Village,
+            - paragraph [ref=e1900]: Bengaluru, 560103,
+            - paragraph [ref=e1901]: Karnataka, India
+          - generic [ref=e1902]: Social
+          - generic [ref=e1903]:
+            - link [ref=e1905] [cursor=pointer]:
+              - /url: https://www.facebook.com/flipkart
+              - img [ref=e1906]
+            - link [ref=e1908] [cursor=pointer]:
+              - /url: https://www.twitter.com/flipkart
+              - img [ref=e1909]
+            - link [ref=e1911] [cursor=pointer]:
+              - /url: https://www.youtube.com/flipkart
+              - img [ref=e1912]
+            - link [ref=e1914] [cursor=pointer]:
+              - /url: https://www.instagram.com/flipkart
+              - img [ref=e1915]
+        - generic [ref=e1917]:
+          - generic [ref=e1918]: "Registered Office Address:"
+          - generic [ref=e1921]:
+            - paragraph [ref=e1922]: Flipkart Internet Private Limited,
+            - paragraph [ref=e1923]: Buildings Alyssa, Begonia &
+            - paragraph [ref=e1924]: Clove Embassy Tech Village,
+            - paragraph [ref=e1925]: Outer Ring Road, Devarabeesanahalli Village,
+            - paragraph [ref=e1926]: Bengaluru, 560103,
+            - paragraph [ref=e1927]: Karnataka, India
+            - paragraph [ref=e1928]: "CIN : U51109KA2012PTC066107"
+            - paragraph [ref=e1929]:
+              - text: "Telephone:"
+              - link "044-45614700" [ref=e1930] [cursor=pointer]:
+                - /url: tel:044-45614700
+              - text: /
+              - link "044-67415800" [ref=e1931] [cursor=pointer]:
+                - /url: tel:044-67415800
+      - generic [ref=e1933]:
+        - generic [ref=e1934]:
+          - img [ref=e1935]
+          - link "Become a Seller" [ref=e1936] [cursor=pointer]:
+            - /url: https://seller.flipkart.com/?utm_source=fkwebsite&utm_medium=websitedirect
+        - generic [ref=e1937]:
+          - img [ref=e1938]
+          - text: Advertise
+        - generic [ref=e1939]:
+          - img [ref=e1940]
+          - link "Gift Cards" [ref=e1941] [cursor=pointer]:
+            - /url: /the-gift-card-store?otracker=footer_navlinks
+        - generic [ref=e1942]:
+          - img [ref=e1943]
+          - link "Help Center" [ref=e1944] [cursor=pointer]:
+            - /url: /helpcentre?otracker=footer_navlinks
+        - generic [ref=e1945]: © 2007-2026 Flipkart.com
+        - img [ref=e1946]
+```

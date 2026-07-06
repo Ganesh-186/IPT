@@ -1,0 +1,6 @@
+I am a JS Alert
+alert
+I am a JS Confirm
+confirm
+I am a JS prompt
+prompt
